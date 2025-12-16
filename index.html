@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             font-family: 'Poppins', sans-serif;
@@ -40,6 +41,15 @@
         .float-animation {
             animation: float 3s ease-in-out infinite;
         }
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            font-size: 24px;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -56,9 +66,7 @@
                     <a href="#contact" class="gradient-bg text-white px-6 py-2 rounded-full hover:opacity-90 transition">Contact</a>
                 </div>
                 <button class="md:hidden text-gray-700" id="menuBtn">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
+                    <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
         </div>
@@ -88,13 +96,24 @@
                             View Projects
                         </a>
                     </div>
+                    <div class="flex gap-4 mt-8">
+                        <a href="https://github.com/your-username" class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center hover:bg-purple-600 hover:text-white transition">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/your-profile" class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center hover:bg-purple-600 hover:text-white transition">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="mailto:your-email@example.com" class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center hover:bg-purple-600 hover:text-white transition">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </a>
+                    </div>
                 </div>
                 <div data-aos="fade-left" data-aos-duration="1000" class="flex justify-center">
                     <div class="relative">
                         <div class="w-80 h-80 gradient-bg rounded-full opacity-20 absolute -z-10 float-animation"></div>
-                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=500&fit=crop" 
-                             alt="Developer" 
-                             class="w-80 h-80 object-cover rounded-full border-8 border-white shadow-2xl">
+                        <div class="w-80 h-80 bg-gradient-to-br from-purple-400 to-blue-500 rounded-full flex items-center justify-center border-8 border-white shadow-2xl">
+                            <i class="fas fa-code text-white text-9xl"></i>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -112,7 +131,9 @@
             </div>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="card-hover bg-gradient-to-br from-purple-50 to-blue-50 p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-4xl mb-4">🔧</div>
+                    <div class="icon-box gradient-bg text-white mb-6">
+                        <i class="fas fa-microchip"></i>
+                    </div>
                     <h3 class="text-xl font-bold mb-3">IoT Engineer</h3>
                     <p class="text-gray-600">
                         Developing smart IoT solutions using Arduino, ESP32, and various sensors. 
@@ -120,7 +141,9 @@
                     </p>
                 </div>
                 <div class="card-hover bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
-                    <div class="text-4xl mb-4">💻</div>
+                    <div class="icon-box gradient-bg text-white mb-6">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
                     <h3 class="text-xl font-bold mb-3">Web Developer</h3>
                     <p class="text-gray-600">
                         Creating responsive and dynamic web applications using React.js, Laravel, 
@@ -128,7 +151,9 @@
                     </p>
                 </div>
                 <div class="card-hover bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="300">
-                    <div class="text-4xl mb-4">🚀</div>
+                    <div class="icon-box gradient-bg text-white mb-6">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
                     <h3 class="text-xl font-bold mb-3">Problem Solver</h3>
                     <p class="text-gray-600">
                         Passionate about solving real-world problems through technology. 
@@ -152,14 +177,17 @@
                 <div class="bg-white p-8 rounded-2xl shadow-lg" data-aos="fade-right">
                     <div class="flex items-center mb-6">
                         <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center text-white text-2xl mr-4">
-                            🔌
+                            <i class="fas fa-broadcast-tower"></i>
                         </div>
                         <h3 class="text-2xl font-bold">IoT Development</h3>
                     </div>
                     <div class="space-y-4">
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span class="font-medium">C++ / Arduino</span>
+                                <span class="font-medium flex items-center gap-2">
+                                    <i class="fas fa-code text-purple-600"></i>
+                                    C++ / Arduino
+                                </span>
                                 <span class="text-gray-600">90%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-3">
@@ -168,7 +196,10 @@
                         </div>
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span class="font-medium">ESP32 / ESP8266</span>
+                                <span class="font-medium flex items-center gap-2">
+                                    <i class="fas fa-wifi text-purple-600"></i>
+                                    ESP32 / ESP8266
+                                </span>
                                 <span class="text-gray-600">85%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-3">
@@ -177,7 +208,10 @@
                         </div>
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span class="font-medium">PlatformIO</span>
+                                <span class="font-medium flex items-center gap-2">
+                                    <i class="fas fa-cog text-purple-600"></i>
+                                    PlatformIO
+                                </span>
                                 <span class="text-gray-600">80%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-3">
@@ -191,14 +225,17 @@
                 <div class="bg-white p-8 rounded-2xl shadow-lg" data-aos="fade-left">
                     <div class="flex items-center mb-6">
                         <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center text-white text-2xl mr-4">
-                            💻
+                            <i class="fas fa-desktop"></i>
                         </div>
                         <h3 class="text-2xl font-bold">Web Development</h3>
                     </div>
                     <div class="space-y-4">
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span class="font-medium">React.js</span>
+                                <span class="font-medium flex items-center gap-2">
+                                    <i class="fab fa-react text-purple-600"></i>
+                                    React.js
+                                </span>
                                 <span class="text-gray-600">85%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-3">
@@ -207,7 +244,10 @@
                         </div>
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span class="font-medium">Laravel</span>
+                                <span class="font-medium flex items-center gap-2">
+                                    <i class="fab fa-laravel text-purple-600"></i>
+                                    Laravel
+                                </span>
                                 <span class="text-gray-600">80%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-3">
@@ -216,7 +256,10 @@
                         </div>
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span class="font-medium">HTML/CSS/JS</span>
+                                <span class="font-medium flex items-center gap-2">
+                                    <i class="fas fa-code text-purple-600"></i>
+                                    HTML/CSS/JS
+                                </span>
                                 <span class="text-gray-600">90%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-3">
@@ -230,27 +273,27 @@
             <!-- Tech Stack Icons -->
             <div class="grid grid-cols-3 md:grid-cols-6 gap-6" data-aos="fade-up">
                 <div class="card-hover bg-white p-6 rounded-xl shadow-md text-center">
-                    <div class="text-4xl mb-2">⚛️</div>
+                    <i class="fab fa-react text-5xl text-blue-500 mb-2"></i>
                     <p class="font-medium">React.js</p>
                 </div>
                 <div class="card-hover bg-white p-6 rounded-xl shadow-md text-center">
-                    <div class="text-4xl mb-2">🎯</div>
+                    <i class="fab fa-laravel text-5xl text-red-500 mb-2"></i>
                     <p class="font-medium">Laravel</p>
                 </div>
                 <div class="card-hover bg-white p-6 rounded-xl shadow-md text-center">
-                    <div class="text-4xl mb-2">🔧</div>
+                    <i class="fas fa-microchip text-5xl text-teal-500 mb-2"></i>
                     <p class="font-medium">Arduino</p>
                 </div>
                 <div class="card-hover bg-white p-6 rounded-xl shadow-md text-center">
-                    <div class="text-4xl mb-2">📡</div>
+                    <i class="fas fa-wifi text-5xl text-purple-500 mb-2"></i>
                     <p class="font-medium">ESP32</p>
                 </div>
                 <div class="card-hover bg-white p-6 rounded-xl shadow-md text-center">
-                    <div class="text-4xl mb-2">💾</div>
+                    <i class="fas fa-file-code text-5xl text-indigo-500 mb-2"></i>
                     <p class="font-medium">C++</p>
                 </div>
                 <div class="card-hover bg-white p-6 rounded-xl shadow-md text-center">
-                    <div class="text-4xl mb-2">🌐</div>
+                    <i class="fab fa-js text-5xl text-yellow-500 mb-2"></i>
                     <p class="font-medium">JavaScript</p>
                 </div>
             </div>
@@ -266,8 +309,8 @@
             </div>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
-                    <div class="h-48 gradient-bg flex items-center justify-center text-white text-6xl">
-                        🏠
+                    <div class="h-48 gradient-bg flex items-center justify-center text-white">
+                        <i class="fas fa-home text-8xl"></i>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Smart Home System</h3>
@@ -280,8 +323,8 @@
                     </div>
                 </div>
                 <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
-                    <div class="h-48 bg-gradient-to-br from-blue-400 to-cyan-400 flex items-center justify-center text-white text-6xl">
-                        🌡️
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-cyan-400 flex items-center justify-center text-white">
+                        <i class="fas fa-cloud-sun text-8xl"></i>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Environmental Monitor</h3>
@@ -294,8 +337,8 @@
                     </div>
                 </div>
                 <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
-                    <div class="h-48 bg-gradient-to-br from-purple-400 to-pink-400 flex items-center justify-center text-white text-6xl">
-                        🛒
+                    <div class="h-48 bg-gradient-to-br from-purple-400 to-pink-400 flex items-center justify-center text-white">
+                        <i class="fas fa-shopping-cart text-8xl"></i>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">E-Commerce Platform</h3>
@@ -318,14 +361,17 @@
                 <h2 class="text-4xl font-bold mb-4">Let's Work Together</h2>
                 <p class="text-xl mb-8 opacity-90">Have a project in mind? Let's create something amazing!</p>
                 <div class="flex flex-wrap justify-center gap-4">
-                    <a href="mailto:your-email@example.com" class="bg-white text-purple-600 px-8 py-4 rounded-full font-medium hover:shadow-lg transition">
-                        📧 Email Me
+                    <a href="mailto:your-email@example.com" class="bg-white text-purple-600 px-8 py-4 rounded-full font-medium hover:shadow-lg transition flex items-center gap-2">
+                        <i class="fas fa-envelope"></i>
+                        Email Me
                     </a>
-                    <a href="https://github.com/your-username" class="bg-white/20 backdrop-blur text-white px-8 py-4 rounded-full font-medium hover:bg-white/30 transition">
-                        💻 GitHub
+                    <a href="https://github.com/your-username" class="bg-white/20 backdrop-blur text-white px-8 py-4 rounded-full font-medium hover:bg-white/30 transition flex items-center gap-2">
+                        <i class="fab fa-github"></i>
+                        GitHub
                     </a>
-                    <a href="https://linkedin.com/in/your-profile" class="bg-white/20 backdrop-blur text-white px-8 py-4 rounded-full font-medium hover:bg-white/30 transition">
-                        💼 LinkedIn
+                    <a href="https://linkedin.com/in/your-profile" class="bg-white/20 backdrop-blur text-white px-8 py-4 rounded-full font-medium hover:bg-white/30 transition flex items-center gap-2">
+                        <i class="fab fa-linkedin"></i>
+                        LinkedIn
                     </a>
                 </div>
             </div>
@@ -335,7 +381,18 @@
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-8">
         <div class="container mx-auto px-6 text-center">
-            <p class="text-gray-400">© 2024 Hafid Dev. Built with passion using React, Laravel & IoT ❤️</p>
+            <div class="flex justify-center gap-6 mb-4">
+                <a href="https://github.com/your-username" class="hover:text-purple-400 transition">
+                    <i class="fab fa-github text-2xl"></i>
+                </a>
+                <a href="https://linkedin.com/in/your-profile" class="hover:text-purple-400 transition">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+                <a href="mailto:your-email@example.com" class="hover:text-purple-400 transition">
+                    <i class="fas fa-envelope text-2xl"></i>
+                </a>
+            </div>
+            <p class="text-gray-400">© 2024 Hafid Dev. Built with passion using React, Laravel & IoT</p>
         </div>
     </footer>
 
